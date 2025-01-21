@@ -1,0 +1,282 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    /* Global Styles */
+    body {
+        font-family: 'Arial', sans-serif;
+        background-image: linear-gradient(135deg, #f47e71 10%, #12c6f384 70%); 
+        margin: 0;
+        padding: 0;
+        color: #2c3e50; /* Dark text for readability */
+    }
+
+    /* About Section */
+    .about-section {
+        padding: 100px 0;
+        background-color: linear-gradient(135deg, #f47e71 10%, #12c6f384 70%); /* Red background */
+        text-align: center;
+        color: #fff;
+        /* background-image: linear-gradient(135deg, #f47e71 10%, #12c6f384 70%); Red to Yellow gradient */
+        position: relative;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .about-header {
+        margin-bottom: 60px;
+    }
+
+    .small-title {
+        font-size: 22px;
+        font-weight: 600;
+        color: #fff;
+        animation: fadeInUp 0.6s ease-in-out;
+    }
+
+    .section-title {
+        font-size: 40px;
+        font-weight: 700;
+        color: #fff;
+        margin-top: 20px;
+        animation: fadeInUp 0.8s ease-in-out;
+    }
+
+    .about-subtitle {
+        font-size: 22px;
+        color: #fdfdfd;
+        margin-top: 10px;
+        animation: fadeInUp 1s ease-in-out;
+    }
+
+    /* About Content */
+    .about-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px;
+        margin-top: 60px;
+        flex-wrap: wrap;
+    }
+
+    .about-image {
+        flex: 0 0 35%;
+        padding: 20px;
+        animation: fadeInLeft 1s ease-in-out;
+    }
+
+    .profile-img {
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .about-details {
+        flex: 0 0 60%;
+        text-align: left;
+        animation: fadeInRight 1s ease-in-out;
+        margin-top: 20px;
+    }
+
+    .about-details p {
+        font-size: 20px;
+        line-height: 1.8;
+        color: #fdfdfd;
+        margin-bottom: 20px;
+        margin-top: -15px;
+    }
+
+    .highlight-text {
+        font-weight: bold;
+        color: #ffff00; /* Yellow for emphasis */
+    }
+
+    .btn-primary {
+        display: inline-block;
+        padding: 14px 28px;
+        background-color: #f39c12; /* Yellow */
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        border-radius: 8px;
+        text-decoration: none;
+        margin-top: 30px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #e67e22; /* Orange on hover */
+        transform: scale(1.05);
+    }
+
+    /* Info Boxes */
+    .info-boxes {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 60px;
+        gap: 20px;
+    }
+
+    .info-box {
+        background-color: #f39c12; /* Yellow */
+        padding: 30px;
+        border-radius: 12px;
+        text-align: center;
+        flex: 0 0 30%;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .info-box h4 {
+        font-size: 42px;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    .info-box p {
+        font-size: 18px;
+        color: #fff;
+    }
+
+    .info-box:hover {
+        transform: translateY(-10px);
+        background-color: #e67e22; /* Orange on hover */
+    }
+
+    .info-box.delay-100 {
+        animation: fadeInUp 0.6s ease-in-out 0.1s;
+    }
+
+    .info-box.delay-200 {
+        animation: fadeInUp 0.6s ease-in-out 0.2s;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes fadeInRight {
+        from {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .about-content {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .about-image,
+        .about-details {
+            flex: 0 0 100%;
+        }
+
+        .info-boxes {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .info-box {
+            width: 100%;
+        }
+    }
+</style>
+
+<section class="about-section">
+    <div class="container">
+        <div class="about-header">
+            <h2 class="section-title animate-fadeInUp delay-100">About Me</h2>
+            <p class="about-subtitle animate-fadeInUp delay-200">A passionate Data Analyst and Python Developer crafting innovative solutions to solve complex problems.</p>
+        </div>
+
+        <div class="about-content">
+            <div class="about-image animate-fadeInLeft">
+                <img src="{{ url_for('static', filename='images/about.jpg') }}" alt="Anubhav Aman Profile Picture" class="profile-img">
+            </div>
+
+            <div class="about-details animate-fadeInRight">
+                <p>Hello! I'm <span class="highlight-text">Anubhav Aman</span>, a passionate Data Analyst and python Developer, with a strong foundation in data-driven insights. I specialize in analyzing complex datasets to derive actionable insights using <span class="highlight-text">Python</span>, <span class="highlight-text">SQL</span>, and advanced <span class="highlight-text">machine learning</span> techniques. Additionally, I create intuitive, data-powered web applications with technologies like <span class="highlight-text">Django</span> and <span class="highlight-text">Flask</span>.</p>
+                
+                <p>Currently, I am a Graduate Engineer Trainee at GHCL, where I apply my skills to solve real-world problems by transforming data into valuable solutions. I also develop web applications that leverage data science principles to build scalable and efficient systems.</p>
+                
+                <p>I’m passionate about continuous learning and stay updated with the latest technologies and trends. I enjoy tackling challenging projects that allow me to grow my skills and contribute meaningfully to the tech world.</p>
+
+                <p>Let’s connect and collaborate on innovative opportunities in data analysis and web development!</p>
+                
+            
+            </div>
+        </div>
+
+        <div class="info-boxes">
+            <div class="info-box animate-fadeInUp">
+                <h4>1</h4>
+                <p>Years of Experience</p>
+            </div>
+            <div class="info-box animate-fadeInUp delay-100">
+                <h4>5+</h4>
+                <p>Projects Completed</p>
+            </div>
+            <div class="info-box animate-fadeInUp delay-200">
+                <a href="https://drive.google.com/file/d/1fRfQ_D9qZDtN7WB78bUPS410ADAs2knx/view?usp=sharing" class="btn btn-primary">Download Resume</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Animations for page load
+    document.addEventListener("DOMContentLoaded", function() {
+        const fadeInElements = document.querySelectorAll('.animate-fadeInUp');
+        fadeInElements.forEach((el, index) => {
+            setTimeout(() => {
+                el.classList.add('fade-in');
+            }, index * 300);
+        });
+
+        const fadeInLeftElements = document.querySelectorAll('.animate-fadeInLeft');
+        fadeInLeftElements.forEach((el, index) => {
+            setTimeout(() => {
+                el.classList.add('fade-in-left');
+            }, index * 300);
+        });
+
+        const fadeInRightElements = document.querySelectorAll('.animate-fadeInRight');
+        fadeInRightElements.forEach((el, index) => {
+            setTimeout(() => {
+                el.classList.add('fade-in-right');
+            }, index * 300);
+        });
+    });
+</script>
+{% endblock %}

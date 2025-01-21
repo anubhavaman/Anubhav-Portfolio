@@ -1,0 +1,242 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Custom styles -->
+<style>
+    .hero {
+        min-height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 2rem;
+        background-image: linear-gradient(135deg, #f47e71 10%, #12c6f384 70%);
+        color: #ffffff;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('/api/placeholder/1920/1080') center/cover;
+        opacity: 0.1;
+        z-index: 0;
+    }
+
+    .hero-content {
+        flex: 1 1 600px;
+        position: relative;
+        z-index: 1;
+        margin-top: 2rem;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .hero-image {
+        flex: 1 1 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        padding: 1rem;
+    }
+
+    .profile-container {
+        position: relative;
+    }
+
+    .profile-img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid #ffc107;
+        box-shadow: 0 0 30px rgba(255, 193, 7, 0.5);
+        margin-top: 50px;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(45deg, #ffc107, #ff5722);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 800;
+        white-space: nowrap;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        color: #e3f2fd;
+    }
+
+    .typed-text {
+        color: #ffc107;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 2rem;
+        color: #bbdefb;
+        margin-left: 60px;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.2);
+        transition: all 0.5s ease;
+    }
+
+    .btn:hover::before {
+        left: 100%;
+    }
+
+    .btn-primary {
+        background: #ffc107;
+        color: #283593;
+        border: none;
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: #ffc107;
+        border: 2px solid #ffc107;
+    }
+
+    .btn:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px rgba(255, 193, 7, 0.5);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fadeInUp {
+        animation: fadeInUp 1s ease forwards;
+    }
+
+    .delay-100 {
+        animation-delay: 0.1s;
+    }
+
+    .delay-200 {
+        animation-delay: 0.2s;
+    }
+
+    .delay-300 {
+        animation-delay: 0.3s;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1200px) {
+        .hero {
+            flex-direction: column;
+            padding: 2rem 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        .cta-buttons {
+            gap: 1rem;
+        }
+    }
+</style>
+
+<section class="hero">
+    <div class="hero-image">
+        <div class="profile-container">
+            <img src="{{ url_for('static', filename='images/index.jpg') }}" alt="Anubhav Aman" class="profile-img">
+        </div>
+    </div>
+    <div class="hero-content">
+        <h1 class="animate-fadeInUp">Hi! I'm Anubhav Aman</h1>
+        <h2 class="animate-fadeInUp delay-100">And I'm a <span class="typed-text"></span></h2>
+        <p class="animate-fadeInUp delay-200">
+            Passionate Python Developer and Data Science enthusiast with a strong focus on crafting innovative solutions. 
+            Experienced in Machine Learning, Data Analysis, and developing robust Python applications. 
+            Currently leveraging my skills as a Graduate Engineer Trainee-IT at GHCL, Ahmedabad, where I contribute to cutting-edge projects and data-driven decision making.
+        </p>
+        <div class="cta-buttons animate-fadeInUp delay-300">
+            <a href="https://drive.google.com/file/d/1GQLIBd_ullnibnRyFR2OIGvLIB2Dcf2a/view?usp=sharing" class="btn btn-primary" target="_blank">Download Resume</a>
+            <a href="{{ url_for('contact') }}" class="btn btn-secondary">Contact Me!</a>
+        </div>
+    </div>
+</section>
+
+<!-- Script imports -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+<script>
+    // Enhanced typing animation
+    const typed = new Typed('.typed-text', {
+        strings: [
+          'Python Developer 🐍',
+            'Data Analyst 📊',
+            'Machine Learning Engineer',
+            'Problem Solver 💡'
+        ],
+        typeSpeed: 70,
+        backSpeed: 40,
+        loop: true,
+        backDelay: 1500,
+        startDelay: 1000,
+        cursorChar: '|',
+        smartBackspace: true
+    });
+</script>
+{% endblock %}

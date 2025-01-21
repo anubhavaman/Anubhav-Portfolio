@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Anubhav Aman - Portfolio{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="{{ url_for('home') }}">Anubhav.</a>
+        </div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}" class="nav-item">Home</a>
+            <a href="{{ url_for('about') }}" class="nav-item">About</a>
+            <a href="{{ url_for('skills') }}" class="nav-item">Skills</a>
+            <a href="{{ url_for('projects') }}" class="nav-item">Projects</a>
+            <a href="{{ url_for('experience') }}" class="nav-item">Experience</a>
+            <a href="{{ url_for('contact') }}" class="nav-item">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/anubhavaman" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/anubhav-aman" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

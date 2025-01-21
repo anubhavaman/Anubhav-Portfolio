@@ -1,0 +1,518 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="skills" class="skills">
+    <div class="main-text">
+        <span class="subtitle">Technical and Professional</span>
+        <h2>My Skills & Expertise</h2>
+        <p class="description">A showcase of my technical abilities and professional competencies</p>
+    </div>
+
+    <div class="skill-main">
+        <!-- Left Section: Technical Skills -->
+        <div class="skill-left">
+            <div class="card">
+                <h3>Technical Proficiency</h3>
+
+                <div class="skill-category">
+                    <h4>Programming Languages</h4>
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>Python</p>
+                            <p class="percentage">90%</p>
+                        </div>
+                        <div class="bar">
+                            <span class="python" data-width="90%"></span>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>C++</p>
+                            <p class="percentage">85%</p>
+                        </div>
+                        <div class="bar">
+                            <span class="cpp" data-width="85%"></span>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>SQL</p>
+                            <p class="percentage">80%</p>
+                        </div>
+                        <div class="bar">
+                            <span class="sql" data-width="80%"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Technologies & Frameworks</h4>
+                    <div class="tech-skills-container">
+                        <div class="skill-bar">
+                            <div class="info">
+                                <p>Machine Learning</p>
+                                <p class="percentage">85%</p>
+                            </div>
+                            <div class="bar">
+                                <span class="ml" data-width="85%"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar">
+                            <div class="info">
+                                <p>Deep Learning</p>
+                                <p class="percentage">80%</p>
+                            </div>
+                            <div class="bar">
+                                <span class="dl" data-width="80%"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar">
+                            <div class="info">
+                                <p>Google Apps Script</p>
+                                <p class="percentage">90%</p>
+                            </div>
+                            <div class="bar">
+                                <span class="gas" data-width="90%"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar">
+                            <div class="info">
+                                <p>Django</p>
+                                <p class="percentage">75%</p>
+                            </div>
+                            <div class="bar">
+                                <span class="django" data-width="75%"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar">
+                            <div class="info">
+                                <p>Flask</p>
+                                <p class="percentage">80%</p>
+                            </div>
+                            <div class="bar">
+                                <span class="flask" data-width="80%"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar">
+                            <div class="info">
+                                <p>Data Analysis</p>
+                                <p class="percentage">90%</p>
+                            </div>
+                            <div class="bar">
+                                <span class="data" data-width="90%"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Section: Skill Highlights -->
+        <div class="skill-right">
+            <div class="card">
+                <h3>Core Competencies</h3>
+                <div class="skill-icons">
+                    <div class="icon-box">
+                        <div class="icon-circle">
+                            <img style="width: 90px;height: 90px;border-radius: 80%;"  src="/static\images\python.jpg" alt="Python" loading="lazy">
+                        </div>
+                        <p>Python</p>
+                    </div>
+
+                    <div class="icon-box">
+                        <div class="icon-circle">
+                            <img style="width: 90px;height: 90px;border-radius: 80%;" src="/static\images\machinelearning.jpg" alt="Machine Learning" loading="lazy">
+                        </div>
+                        <p>Machine Learning</p>
+                    </div>
+
+                    <div class="icon-box">
+                        <div class="icon-circle">
+                            <img style="width: 90px;height: 90px;border-radius: 80%;"  src="/static\images\DeepLearning.jpg" alt="Deep Learning" loading="lazy">
+                        </div>
+                        <p>Deep Learning</p>
+                    </div>
+
+                    <div class="icon-box">
+                        <div class="icon-circle">
+                            <img  style="width: 90px;height: 95px;border-radius: 80%;" src="/static\images\DataAnalysis.jpg" alt="Data Analysis" loading="lazy">
+                        </div>
+                        <p>Data Analysis</p>
+                    </div>
+
+                    <div class="icon-box">
+                        <div class="icon-circle">
+                            <img src="/static\images\SQL.png" alt="SQL" loading="lazy">
+                        </div>
+                        <p>SQL</p>
+                    </div>
+
+                    <div class="icon-box">
+                        <div class="icon-circle">
+                            <img src="/static\images\flask.png" alt="Flask" loading="lazy">
+                        </div>
+                        <p>Flask</p>
+                    </div>
+
+                    <div class="icon-box">
+                        <div class="icon-circle">
+                            <img style="width: 90px;height: 90px;border-radius: 80%;"  src="/static\images\PowerBI.jpg" alt="Power BI" loading="lazy">
+                        </div>
+                        <p>Power BI</p>
+                    </div>
+                    <div class="icon-box">
+                        <div class="icon-circle">
+                            <img style="width: 90px;height: 90px;border-radius: 80%;"  src="/static\images\DSA.jpg" alt="DSA" loading="lazy">
+                        </div>
+                        <p>DSA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Reset and Base Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    /* Section Styling */
+    #skills {
+        padding: 80px 40px;
+        background-image: linear-gradient(135deg, #f47e71 10%, #12c6f384 70%);
+        font-family: 'Poppins', sans-serif;
+        min-height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    /* Card Styling */
+    .card {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        height: 100%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background: linear-gradient(135deg, #f47e71 10%, #12c6f384 70%);
+        
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Header Styling */
+    .main-text {
+        text-align: center;
+        margin-bottom: 60px;
+        opacity: 0;
+        animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .subtitle {
+        display: inline-block;
+        font-size: 16px;
+        color: #6c757d;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 15px;
+        background: linear-gradient(90deg, #4a90e2, #67b26f);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: relative;
+    }
+
+    .main-text h2 {
+        font-size: 42px;
+        color: #2d3436;
+        font-weight: 700;
+        margin: 0 0 15px;
+        position: relative;
+    }
+
+    .description {
+        color: #111111;
+        font-size: 18px;
+        max-width: 600px;
+        margin: 0 auto;
+        font-weight: bolder;
+    }
+
+    /* Layout Styling */
+    .skill-main {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        gap: 40px;
+        max-width: 1400px;
+        margin: 0 auto;
+        margin-top: -10px;
+
+    }
+    
+
+    /* Headings */
+    h3 {
+        font-size: 28px;
+        color: #2d3436;
+        margin-bottom: 30px;
+        text-align: center;
+        position: relative;
+    }
+
+    h3::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 3px;
+        background: linear-gradient(90deg, #4a90e2, #67b26f);
+    }
+
+    h4 {
+        font-size: 22px;
+        color: #2d3436;
+        margin: 25px 0 20px;
+        font-weight: 600;
+    }
+
+    /* Skill Bars */
+    .skill-bar {
+        margin-bottom: 25px;
+    }
+
+    .info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    .info p {
+        font-size: 16px;
+        color: #4a4a4a;
+        font-weight: 500;
+    }
+
+    .percentage {
+        color: #4a90e2;
+        font-weight: 600;
+    }
+
+    .bar {
+        height: 10px;
+        background: #e9ecef;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .bar span {
+        position: absolute;
+        height: 100%;
+        width: 0;
+        border-radius: 10px;
+        transition: width 1.5s ease;
+    }
+
+    /* Skill Bar Colors */
+    .python { background: linear-gradient(90deg, #9b59b6, #8e44ad); }
+    .cpp { background: linear-gradient(90deg, #f1c40f, #f39c12); }
+    .sql { background: linear-gradient(90deg, #2ecc71, #27ae60); }
+    .ml { background: linear-gradient(90deg, #9b59b6, #8e44ad); }
+    .dl { background: linear-gradient(90deg, #f1c40f, #f39c12); }
+    .gas { background: linear-gradient(90deg, #1abc9c, #16a085); }
+    .django { background: linear-gradient(90deg, #34495e, #2c3e50); }
+    .flask { background: linear-gradient(90deg, #35d04f, #54cb36); }
+    .data { background: linear-gradient(90deg, #1316d6, #1411c6); }
+
+    /* Technologies Container */
+    .tech-skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* Creates two equal-width columns */
+    gap: 20px;
+}
+
+
+    /* Icon Grid */
+    .skill-icons {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .icon-box {
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .icon-circle {
+        width: 90px;
+        height: 90px;
+        margin: 0 auto 15px;
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .icon-box img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+    }
+
+    .icon-box p {
+        font-size: 14px;
+        color: #4a4a4a;
+        font-weight: 500;
+        margin-top: 10px;
+    }
+
+    /* Hover Effects */
+    .icon-box:hover .icon-circle {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .icon-box:hover img {
+        transform: scale(1.1);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fillBar {
+        from { width: 0; }
+        to { width: var(--width); }
+    }
+
+    .skill-bar.animated span {
+        animation: fillBar 1.5s ease forwards;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+        .skill-main {
+            grid-template-columns: 1fr;
+        }
+
+        .card {
+            padding: 30px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        #skills {
+            padding: 60px 20px;
+        }
+
+        .main-text h2 {
+            font-size: 32px;
+        }
+
+        h3 {
+            font-size: 24px;
+        }
+
+        h4 {
+            font-size: 20px;
+        }
+
+        .skill-icons {
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        }
+
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+        }
+
+        .icon-box img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .description {
+            font-size: 16px;
+            padding: 0 20px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .card {
+            padding: 20px;
+        }
+
+        .icon-circle {
+            width: 70px;
+            height: 70px;
+        }
+
+        .icon-box img {
+            width: 35px;
+            height: 35px;
+        }
+
+        .info p {
+            font-size: 14px;
+        }
+    }
+   
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize skill bars
+        const skillBars = document.querySelectorAll('.bar span');
+        skillBars.forEach(bar => {
+            const width = bar.getAttribute('data-width');
+            bar.style.setProperty('--width', width);
+        });
+
+        // Animate skill bars on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.skill-bar').forEach(bar => {
+            observer.observe(bar);
+        });
+    });
+</script>
+{% endblock %}
