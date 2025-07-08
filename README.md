@@ -11,7 +11,7 @@ This is a Python Flask web application for a personal portfolio website.
 
 1. Install Python dependencies:
    ```bash
-   pip install -r requirements.txt
+   python -m pip install -r requirements.txt
    ```
 
 2. Run the Flask application:
